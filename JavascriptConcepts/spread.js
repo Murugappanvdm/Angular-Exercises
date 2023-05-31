@@ -1,0 +1,10 @@
+c=[11,22,33]
+a=[4,6,2,7,8,c,...c,[...c]]
+b=[...a]
+console.log(a)
+console.log(b)
+b[9]=22
+c[9]='a'
+console.log(a)
+console.log(b)
+console.log(c)
