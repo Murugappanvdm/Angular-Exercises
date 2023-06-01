@@ -1,31 +1,30 @@
-async function quoteRead()
-{
+async function quoteRead() {
     let response = await fetch("https://api.quotable.io/random")
     let data = await response.text()
     //console.log(JSON.parse(data))
-    quote =  JSON.parse(data)
+    quote = JSON.parse(data)
     author = quote.author
     content = quote.content
     let code = ""
-    code +="<p>"+ content + "</p>"
-    code +="<b><i> - "+author+"</i></b>"
-    document.getElementById("quotes-for-the-day").innerHTML=code
+    code += "<p>" + content + "</p>"
+    code += "<b><i> - " + author + "</i></b>"
+    document.getElementById("quotes-for-the-day").innerHTML = code
 }
 
 quoteRead()
-setInterval(quoteRead,5000)
+setInterval(quoteRead, 5000)
 
-async function authorSearch(){
-       let searchString=document.getElementById("author").value
-let response=await fetch("https://api.quotable.io/search/authors?query="+searchString)
-       let data = await response.text()
-       let authorData = JSON.parse(data)
-       let authors = authorData.results
-       let code=""
-       for(let author of authors){
-            code+="<div class='author-name'>"+author.name+"</div>"
-       }
-       document.getElementById("author-result").innerHTML=code
+async function authorSearch() {
+    let searchString = document.getElementById("author").value
+    let response = await fetch("https://api.quotable.io/search/authors?query=" + searchString)
+    let data = await response.text()
+    let authorData = JSON.parse(data)
+    let authors = authorData.results
+    let code = ""
+    for (let author of authors) {
+        code += "<div class='author-name'>" + author.name + "</div>"
+    }
+    document.getElementById("author-result").innerHTML = code
 }
 /*response=fetch("https://api.quotable.io/random")
 //return of fetch is promise
