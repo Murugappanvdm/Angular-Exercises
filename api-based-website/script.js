@@ -1,18 +1,19 @@
-async function quoteRead() {
+async function quoteRead()
+{
     let response = await fetch("https://api.quotable.io/random")
     let data = await response.text()
     //console.log(JSON.parse(data))
-    quote = JSON.parse(data)
+    quote =  JSON.parse(data)
     author = quote.author
     content = quote.content
     let code = ""
-    code += "<p>" + content + "</p>"
-    code += "<b><i> - " + author + "</i></b>"
-    document.getElementById("quotes-for-the-day").innerHTML = code
+    code +="<p>"+ content + "</p>"
+    code +="<b><i> - "+author+"</i></b>"
+    document.getElementById("quotes-for-the-day").innerHTML=code
 }
+
 quoteRead()
-setInterval(
-    quoteRead, 3000)
+setInterval(quoteRead,5000)
 /*response=fetch("https://api.quotable.io/random")
 //return of fetch is promise
 //unless you specify method name in fetch function, it
