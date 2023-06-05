@@ -1,0 +1,14 @@
+.box {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgb(123, 150, 122);
+    color: rgb(62,62,83);
+    float: left;
+    box-shadow: 2px 2px 5px gray;
+}
+h1{
+    color:red;
+    background-color: yellow;
+}
