@@ -18,9 +18,12 @@
   </div>
 </div>
 
+<div id="message-area" [ngStyle]="currentTheme" [style.padding]="'30px'" [style.marginTop]="'15px'">
+  <h3 [style.textAlign]="'center'">{{message}}</h3>
+</div>
 
 <div id="content-area">
-  <app-box *ngFor="let x of services" [boxtheme]="currentTheme" [title]="x"></app-box>
+  <app-box *ngFor="let x of services" [boxtheme]="currentTheme" [title]="x" (featureClick)="receiveFromChild($event)"></app-box>
  <!--  <app-box></app-box>
    <app-box></app-box>
    <app-box></app-box> -->

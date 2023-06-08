@@ -3,6 +3,15 @@
 <h3 [style.color]="boxtheme.color">{{boxtitle}}</h3>
 <hr/>
 <ul>
-    <li *ngFor="let x of features">{{x}}</li>
+    <li *ngFor="let x of features" (click)="onFeatureSelect(x)">
+        <span  *ngIf="type(x)=='string'">{{x}}</span>  
+        <span *ngIf="type(x)!='string'">
+            <u>{{x.title}}</u>
+              <ul>
+                  <li *ngFor="let y of x.techs" 
+                    [style.listStyleType]="'square'"
+                    >{{y}}</li>
+              </ul>
+        </span></li>
 </ul>
 </div>
