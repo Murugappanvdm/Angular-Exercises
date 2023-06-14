@@ -1,5 +1,5 @@
-<div class="review">
-    <h3> {{current.name}} says...</h3>
+<div class="review"  [highlight]="current.message" >
+    <h3> {{current.name | uppercase}} says...</h3>
     <p>
         {{current.message}}
     </p>
