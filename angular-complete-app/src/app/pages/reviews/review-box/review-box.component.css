@@ -1,0 +1,22 @@
+.review {
+    margin:20px;
+    padding: 20px;
+    width: 800px;
+    min-height: 100px;
+    box-shadow: 2px 2px 5px rgb(81, 80, 80);
+    background-color: rgb(255, 251, 251);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+h3{
+    color: darkblue;
+}
+
+p {
+    color: rgb(54, 54, 54);
+}
+
+h5{
+    color: darkred;
+    text-align:right;
+}

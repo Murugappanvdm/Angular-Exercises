@@ -1,0 +1,28 @@
+.service-box{
+    float: left;
+    margin: 25px;
+    height: 300px;
+    width: 300px;
+    box-shadow: 5px 5px 10px ghostwhite;
+    position: relative;
+}
+
+#service-img, #service-img img{
+    height: 100%;
+    width: 100%;
+}
+
+#title {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    min-height: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    text-shadow: 2px 2px 3px gainsboro;
+    font-size: 20px;
+    background-color: black;
+}

@@ -1,0 +1,26 @@
+.details,.description {
+    overflow:hidden
+}
+
+h1 ,li {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #474444;
+    margin: 20px;
+}
+
+.left {
+    width: 30%;
+    box-sizing: border-box;
+    padding: 10%;
+    float: left;
+}
+.right{
+    width: 60%;
+    box-sizing:  border-box;
+    padding: 5%;
+    float: left;
+}
+
+.left img{
+    height: 300px;width: 300px;
+}
