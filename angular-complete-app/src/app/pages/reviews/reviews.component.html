@@ -1,3 +1,4 @@
+
 <h2 [style.color]="'#34495E'" [style.paddingLeft]="'40px'"> Reviews</h2>
 <div [style.backgroundColor]="'#34495E'" [style.color]="'whitesmoke'" [style.padding]="'20px'">
     Project Type 
@@ -7,3 +8,4 @@
 
 </div>
 <app-review-box *ngFor="let x of reviews | reviewfilter:selected" [review]="x"></app-review-box>
+<app-review-form></app-review-form>
