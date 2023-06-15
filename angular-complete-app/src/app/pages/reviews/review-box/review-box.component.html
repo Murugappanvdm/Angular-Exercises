@@ -1,7 +1,7 @@
 <div class="review"  [highlight]="current.message" >
     <h3> {{current.name | uppercase}} says...</h3>
     <p>
-        {{current.message}}
+        {{current.message | quoteit}}
     </p>
     <h5> {{current.type}} </h5>
 </div>

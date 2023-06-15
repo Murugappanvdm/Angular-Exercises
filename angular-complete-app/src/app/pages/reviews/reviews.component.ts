@@ -7,16 +7,19 @@ import { ReviewService } from 'src/app/services/review.service';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.css']
 })
-export class ReviewsComponent implements OnInit{
-  reviews:review[]=[]
-
-  constructor(private rs:ReviewService) {
+export class ReviewsComponent implements OnInit {
+  reviews: review[] = []
+  types: string[] = ["Branding and Communication", "Inbound &  Content Marketing", "Film &  Webinar",
+    "Digital Marketing", "ECommerce & Websites", "Market Analysis", "All"]
+    
+  selected: string = "All"
+  constructor(private rs: ReviewService) {
 
   }
   ngOnInit() {
-      this.rs.getReviews().subscribe ({
-          next: (data:review[])=> this.reviews =data,
-          error: (error:any) => this.reviews= []
-      })
+    this.rs.getReviews().subscribe({
+      next: (data: review[]) => this.reviews = data,
+      error: (error: any) => this.reviews = []
+    })
   }
 }
