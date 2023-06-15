@@ -6,4 +6,4 @@
     </select>
 
 </div>
-<app-review-box *ngFor="let x of reviews" [review]="x"></app-review-box>
+<app-review-box *ngFor="let x of reviews | reviewfilter:selected" [review]="x"></app-review-box>

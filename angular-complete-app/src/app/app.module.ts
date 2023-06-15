@@ -18,6 +18,7 @@ import { ReviewBoxComponent } from './pages/reviews/review-box/review-box.compon
 import { HighlightDirective } from './directives/highlight.directive';
 import { QuoteitPipe } from './pipes/quoteit.pipe';
 import { FormsModule } from '@angular/forms';
+import { ReviewfilterPipe } from './pipes/reviewfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     DetailsComponent,
     ReviewBoxComponent,
     HighlightDirective,
-    QuoteitPipe
+    QuoteitPipe,
+    ReviewfilterPipe
   ],
   imports: [
     BrowserModule,
