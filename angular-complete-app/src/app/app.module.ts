@@ -11,7 +11,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ReviewsComponent } from './pages/reviews/reviews.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { ContactBoxComponent } from './pages/contact/contact-box/contact-box.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ServiceBoxComponent } from './pages/home/service-box/service-box.component';
 import { DetailsComponent } from './pages/home/details/details.component';
 import { ReviewBoxComponent } from './pages/reviews/review-box/review-box.component';
@@ -21,6 +21,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReviewfilterPipe } from './pipes/reviewfilter.pipe';
 import { ReviewFormComponent } from './pages/reviews/review-form/review-form.component';
 import { EnqiryFormComponent } from './pages/home/enqiry-form/enqiry-form.component';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http,'./assets/i18n/','.json');
+}
 
 @NgModule({
   declarations: [
@@ -47,7 +53,14 @@ import { EnqiryFormComponent } from './pages/home/enqiry-form/enqiry-form.compon
     MaterialModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
   ],
   providers: [],
   bootstrap: [AppComponent]
