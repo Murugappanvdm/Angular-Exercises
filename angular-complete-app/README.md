@@ -74,3 +74,13 @@ Difference b/w a promise and observable is promise can be resolved/rejected
 only once whereas observable can get value from the function one or more times
 and we also have option to unsubscribe an observable whereas with a promise
 it is not possible
+
+
+
+cmd
+----
+json-server --port 4500 data.json
+
+ng serve
+
+node index.js
