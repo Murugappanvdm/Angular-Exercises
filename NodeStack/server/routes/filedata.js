@@ -6,7 +6,7 @@ route.post("/enquiries", function (request, response) {
     let file;
     if (request.files) {
         file = request.files.supportfile;
-        file.mv("c:/temp/" + file.name);
+        file.mv("c:/temp/a123/" + file.name);
     }
     let enquiry = {
         name: request.body.name,
@@ -29,7 +29,7 @@ route.post("/enquiries", function (request, response) {
                 if (err)
                     response.sendStatus(500);
                 else
-                    response.send("DATA STORED IN FILE");
+                    response.send({result:"DATA STORED IN FILE"});
             });
         }
 
