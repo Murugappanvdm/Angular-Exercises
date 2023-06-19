@@ -1,2 +1,6 @@
-<app-service-box *ngFor="let x of services"
-[service]="x"></app-service-box>
+<div id="services">
+    <app-service-box *ngFor="let x of services" [service]="x"></app-service-box>
+</div>
+<div id="enquiry">
+    <app-enqiry-form></app-enqiry-form>
+</div>
